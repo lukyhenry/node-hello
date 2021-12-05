@@ -5,12 +5,14 @@
 replicaCount: 1
 
 image:
-  repository: lukyhenry/hello-world
+  # repository: lukyhenry/hello-world
+  repository: registry.gitlab.com/lukyhenry/node-hello
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
   tag: "latest"
 
-imagePullSecrets: []
+imagePullSecrets:
+- name: gitlab-pull-secret
 nameOverride: ""
 fullnameOverride: ""
 

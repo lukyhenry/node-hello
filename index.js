@@ -1,8 +1,15 @@
-const http = require('http');
+const express = require('express')
+const app = express()
 const port = process.env.PORT || 3000;
 
-const server = http.createServer((req, res) => {
-  res.statusCode = 200;
-  const msg = 'Hello World'
-  res.end(msg);
-});
+app.get('/', (req, res) => {
+  res.send('Hello World')
+})
+
+app.get('/version', (req, res) => {
+  res.send(process.env.VERSION || 'No version')
+})
+
+app.listen(port, () => {
+  console.log(`Example app listening on port ${port}!`)
+})

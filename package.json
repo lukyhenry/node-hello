@@ -1,23 +1,18 @@
 {
-  "name": "node-hello",
+  "name": "node-hello-world",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
+  "repository": "git-github:learnk8s/node-hello-world",
+  "author": "<hello@learnk8s.io>",
+  "license": "MIT",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.16.2"
   },
   "scripts": {
+    "test": "node test.js",
     "start": "node index.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/johnpapa/node-hello.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/johnpapa/node-hello/issues"
-  },
-  "homepage": "https://github.com/johnpapa/node-hello#readme"
+  "devDependencies": {
+    "tape": "^4.8.0"
+  }
 }
